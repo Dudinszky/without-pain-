@@ -1,0 +1,137 @@
+
+@import '../scss/base/fonts';
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+.section { 
+  background-color: #f2395a;
+  color: #fff;
+  font-size: 25px;
+  height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  overflow: hidden;
+  // align-items: center;
+  position: relative;
+  perspective: 800px;
+}
+  
+.section__navig {
+  margin-top: 38px;
+
+  .section__list {
+    padding: 0;
+
+    .section__item {
+      display: inline-block;
+      padding-left: 20px;
+
+      .section__link {
+        font-family: 'comic';
+        font-size: 50px;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.section:hover .small {
+  transform: translateY(10px) rotateX(15deg);
+  transition-delay: 0.2s;
+}
+.section:hover .medium {
+  transform: translateY(10px) rotateX(15deg);
+  transition-delay: 0.4s;
+}
+.section:hover .big {
+  transform: translateY(10px) rotateX(15deg);
+  transition-delay: 0.6s;
+}
+
+.heading {
+  margin-left: 40%;
+}
+
+@media  (max-width: 1080px) {
+  .heading {
+    margin-left: 500px;
+  }
+}
+.small, .medium, .big {
+  background-color: #fff;
+  position: absolute;
+  transition: 1s;
+  transform: translateY(95%);
+}
+
+.small {
+  width: 200px;
+  height: 280px;
+  left: 5%;
+  bottom: 0;
+  background: url('../img/bcg1.jpg');
+  background-size: 100%;
+  z-index: 3;
+}
+.medium {
+  width: 360px;
+  height: 380px;
+  bottom: 0;
+  left: 10%;
+  background: url('../img/bcg2.jpg');
+  z-index: 1;
+}
+.big {
+  width: 550px;
+  height: 480px;
+  bottom: 0;
+  left: 15%;
+  background: url('../img/bcg3.jpg');
+  background-size: 100%;
+}
+  
+.gallery {
+  position: absolute;
+  top: 45px;
+  right: 40px;
+  transition: 1s;
+  .photos {
+    position: relative;
+    img {
+      width: 430px;
+      height: 630px;
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      transition: opacity 1s;
+      box-shadow: 1px -1px 26px 6px rgba(0,0,0,0.37);
+      &.showed {
+        opacity: 1;
+      }
+    }
+  }
+
+  #btn-prev {
+    width: 90px;
+    height: 80px;
+    position: absolute;
+    top: 300px;
+    right: 332px;
+    display: none;
+    cursor: pointer;
+  }
+
+  #btn-next {
+    width: 90px;
+    height: 80px;
+    position: absolute;
+    top: 300px;
+    right: 12px;
+    display: none;
+    cursor: pointer;
+  }
+}
