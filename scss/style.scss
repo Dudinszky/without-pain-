@@ -28,12 +28,17 @@
     .section__item {
       display: inline-block;
       padding-left: 20px;
-
       .section__link {
         font-family: 'comic';
         font-size: 50px;
         text-decoration: none;
-        color: #fff;
+        color: #000;
+        &:hover {
+          color: #fff;
+          border-bottom: 5px solid #fff;
+          transform: scale(4.3);
+          transition: all 0.5s ease;
+        }
       }
     }
   }

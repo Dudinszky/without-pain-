@@ -26,7 +26,12 @@
         font-family: 'comic';
         font-size: 50px;
         text-decoration: none;
-        color: #fff; }
+        color: #000; }
+        .section__navig .section__list .section__item .section__link:hover {
+          color: #fff;
+          border-bottom: 5px solid #fff;
+          transform: scale(4.3);
+          transition: all 0.5s ease; }
 
 .section:hover .small {
   transform: translateY(10px) rotateX(15deg);
